@@ -40,6 +40,21 @@ namespace MikroHotel
             //throw new NotImplementedException();
             this.Close();
         }
+
+        private void Button3_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Button2_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Button1_OnClick(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
     
 }

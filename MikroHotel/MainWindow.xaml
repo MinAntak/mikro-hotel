@@ -21,9 +21,9 @@
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="1" >
-            <Button Name="button1" Content="Lista Gości" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
-            <Button Name="button2" Content="Lista Pokoi" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
-            <Button Name="button3" Content="Dodaj Pokoje" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
+            <Button Name="button1" Content="Lista Gości" Click="Button1_OnClick" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
+            <Button Name="button2" Content="Lista Pokoi" Click="Button2_OnClick" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
+            <Button Name="button3" Content="Dodaj Pokoje" Click="Button3_OnClick" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
             <Button Name="button4" Content="O programie" Click="Button4_OnClick" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
             <Button Name="button5" Content="Wyjście" Click="Button5_OnClick" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
            </StackPanel>
