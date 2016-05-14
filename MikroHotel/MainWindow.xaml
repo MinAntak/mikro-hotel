@@ -1,0 +1,31 @@
+﻿<Window x:Class="MikroHotel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MikroHotel"
+        mc:Ignorable="d"
+        Title="Mikro Hotel" Height="350" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Column="1" Grid.Row="0">
+            <Label Name="label1" Content="MikroHotel" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="1" >
+            <Button Name="button1" Content="Lista Gości" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
+            <Button Name="button2" Content="Lista Pokoi" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
+            <Button Name="button3" Content="Dodaj Pokoje" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
+            <Button Name="button4" Content="O programie" Click="Button4_OnClick" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
+            <Button Name="button5" Content="Wyjście" Click="Button5_OnClick" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
+           </StackPanel>
+    </Grid>
+</Window>
