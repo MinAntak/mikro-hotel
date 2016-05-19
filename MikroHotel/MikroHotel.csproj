@@ -60,6 +60,12 @@
     <Compile Include="about\About_Window.xaml.cs">
       <DependentUpon>About_Window.xaml</DependentUpon>
     </Compile>
+    <Compile Include="room\AddRoom.xaml.cs">
+      <DependentUpon>AddRoom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="room\RoomWindow.xaml.cs">
+      <DependentUpon>RoomWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="about\About_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -73,11 +79,21 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="data\Data.cs" />
+    <Compile Include="data\Guest.cs" />
+    <Compile Include="data\GuestDataInterface.cs" />
     <Compile Include="data\Room.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="room\AddRoom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="room\RoomWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

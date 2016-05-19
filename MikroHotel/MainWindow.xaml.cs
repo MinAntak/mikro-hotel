@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using MikroHotel.about;
+using MikroHotel.data;
+using MikroHotel.room;
 
 
 namespace MikroHotel
@@ -43,12 +45,14 @@ namespace MikroHotel
 
         private void Button3_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            AddRoom addRoomWindow = new AddRoom();
+            addRoomWindow.Show();
         }
 
         private void Button2_OnClick(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            RoomWindow roomWindow = new RoomWindow();
+            roomWindow.Show();
         }
 
         private void Button1_OnClick(object sender, RoutedEventArgs e)
