@@ -8,19 +8,29 @@ namespace MikroHotel.data
 {
     public class Room : Data
     {
-        private int id;
-        private int number;
+        public int ID { get; set; }
+        public int Number { get; set; }
+        public string Vacant { get; set; }
 
         public Room()
         {
             
         }
 
+        public Room(int roomnumber, int id, int people, string description)
+        {
+            this.ID = id;
+            this.Number = roomnumber;
+            this.Description = description;
+            this.People = people;
+            this.Vacant = "Wolny";
+        }
+
         public void randomID()
         {
             Random rand = new Random();
 
-            id = rand.Next();
+            ID = rand.Next();
         }
     }
 }

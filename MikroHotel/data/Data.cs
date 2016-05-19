@@ -9,8 +9,8 @@ namespace MikroHotel.data
     public class Data
     {
         public int Room { get; set; }
-        protected int people; //how many people in room
-        protected String description;
+        public int People { get; set; }
+        public string Description { get; set; }
 
         public Data()
         {

@@ -8,7 +8,11 @@ namespace MikroHotel.data
 {
     class Guest : Data, IGuestData
     {
-        private int guestName, guestSurname, guestPhone;
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public int Phone { get; set; }
+        
+
         public void addGuest()
         {
             
