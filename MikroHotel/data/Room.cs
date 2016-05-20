@@ -10,8 +10,14 @@ namespace MikroHotel.data
     {
         public int ID { get; set; }
         public int Number { get; set; }
-        public string Vacant { get; set; }
+        public status Vacant { get; set; }
+        public Guest RoomGuest { get; set; }
 
+
+        public enum status
+        {
+            Wolny, Zajety, Zarezerwowany, Niedostepny
+        }
         public Room()
         {
             
@@ -23,7 +29,8 @@ namespace MikroHotel.data
             this.Number = roomnumber;
             this.Description = description;
             this.People = people;
-            this.Vacant = "Wolny";
+            this.Vacant = status.Wolny;
+            this.RoomGuest = new Guest();
         }
 
         public void randomID()
@@ -32,5 +39,5 @@ namespace MikroHotel.data
 
             ID = rand.Next();
         }
-    }
+      }
 }

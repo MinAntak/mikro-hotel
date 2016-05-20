@@ -21,15 +21,14 @@ namespace MikroHotel.room
     /// </summary>
     public partial class RoomWindow : Window
     {
-        public ObservableCollection<Room> RoomList { get; set; }
-        
+        private Container container;
 
-        public RoomWindow(ObservableCollection<Room> RoomList)
+        public RoomWindow(Container container)
         {
             InitializeComponent();
-            this.RoomList = RoomList;
-            this.ListView1.ItemsSource = this.RoomList;
-            
+            this.container = container;
+            this.ListView1.ItemsSource = this.container.RoomList;
+
         }
 
         private void ListView1_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
@@ -41,7 +40,36 @@ namespace MikroHotel.room
         {
             try
             {
-                this.RoomList.RemoveAt(this.ListView1.SelectedIndex);
+                this.container.RoomList.RemoveAt(this.ListView1.SelectedIndex);
+                container.SaveFile();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nie zaznaczono pokoju");
+            }
+        }
+
+        private void Button2_OnClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                RoomStatus status = new RoomStatus(container.RoomList[this.ListView1.SelectedIndex], ListView1, container);
+                status.Show();
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nie zaznaczono pokoju");
+            }
+        }
+
+        private void Button3_OnClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                EditRoom edit = new EditRoom(container.RoomList[this.ListView1.SelectedIndex], ListView1, container);
+                edit.Show();
+
             }
             catch (Exception ex)
             {

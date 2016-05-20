@@ -60,13 +60,41 @@
     <Compile Include="about\About_Window.xaml.cs">
       <DependentUpon>About_Window.xaml</DependentUpon>
     </Compile>
+    <Compile Include="data\Container.cs" />
+    <Compile Include="guest\AddGuest.xaml.cs">
+      <DependentUpon>AddGuest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="guest\AddReservation.xaml.cs">
+      <DependentUpon>AddReservation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="guest\GuestWindow.xaml.cs">
+      <DependentUpon>GuestWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="room\AddRoom.xaml.cs">
       <DependentUpon>AddRoom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="room\EditRoom.xaml.cs">
+      <DependentUpon>EditRoom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="room\RoomStatus.xaml.cs">
+      <DependentUpon>RoomStatus.xaml</DependentUpon>
     </Compile>
     <Compile Include="room\RoomWindow.xaml.cs">
       <DependentUpon>RoomWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="about\About_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="guest\AddGuest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="guest\AddReservation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="guest\GuestWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -87,6 +115,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="room\AddRoom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="room\EditRoom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="room\RoomStatus.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

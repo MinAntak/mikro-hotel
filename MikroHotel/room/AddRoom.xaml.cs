@@ -23,27 +23,36 @@ namespace MikroHotel.room
     /// </summary>
     public partial class AddRoom : Window
     {
-        public ObservableCollection<Room> RoomList { get; set; }
-        public AddRoom(ObservableCollection<Room> RoomList)
+        private Container container;
+        
+        public AddRoom(Container container)
         {
             InitializeComponent();
-            this.RoomList = RoomList;
+            this.container = container;
         }
 
         private void AddButton_OnClick(object sender, RoutedEventArgs e)
         {
-            int id = randomID();
-            int howRooms = int.Parse(this.Ilepokoi.Text);
-            int firstRoom = int.Parse(this.Numerpierwszego.Text);
-            int howPeople = int.Parse(this.Ileosobowy.Text);
-            string description = this.Opis.Text;
-
-            for (int i = firstRoom; i <= firstRoom+howRooms; i++)
+            try
             {
-                RoomList.Add(new Room(i, id, howPeople, description));
+                int id = randomID();
+                int howRooms = int.Parse(this.Ilepokoi.Text);
+                int firstRoom = int.Parse(this.Numerpierwszego.Text);
+                int howPeople = int.Parse(this.Ileosobowy.Text);
+                string description = this.Opis.Text;
+
+                for (int i = firstRoom; i < firstRoom + howRooms; i++)
+                {
+                    container.RoomList.Add(new Room(i, id, howPeople, description));
+                }
+                container.SaveFile();
+                MessageBox.Show(@"Zakończono dodawanie " + howRooms + " Pokoi");
             }
-            SaveFile();
-            MessageBox.Show(@"Zakończono dodawanie "+howRooms+" Pokoi");
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nie podano poprawnie danych");
+            }
+            
         }
         public int randomID()
         {
@@ -52,13 +61,6 @@ namespace MikroHotel.room
             return(rand.Next());
         }
 
-        private void SaveFile()
-        {
-            using (var sw = new StreamWriter("listapokoi.xml"))
-            {
-                var serializer = new XmlSerializer(typeof(ObservableCollection<Room>));
-                serializer.Serialize(sw, RoomList);
-            }
-        }
+        
     }
 }

@@ -1,0 +1,39 @@
+﻿<Window x:Class="MikroHotel.guest.GuestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MikroHotel.guest"
+        mc:Ignorable="d"
+        Title="GuestWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListView Name="ListView1" Margin="5" Grid.Column="0">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Numer pokoju" 
+                                    DisplayMemberBinding="{Binding Number}" />
+                    <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Vacant}"/>
+                    <GridViewColumn Header="Nazwisko" DisplayMemberBinding="{Binding RoomGuest.Surname}" />
+                    <GridViewColumn Header="Imie" DisplayMemberBinding="{Binding RoomGuest.Name}" />
+                    <GridViewColumn Header="Telefon" DisplayMemberBinding="{Binding RoomGuest.Phone}"/>
+                    <GridViewColumn Header="Przyjazd" DisplayMemberBinding="{Binding RoomGuest.CheckIn}"/>
+                    <GridViewColumn Header="Odjazd" DisplayMemberBinding="{Binding RoomGuest.CheckOut}"/>
+                    <GridViewColumn Header="Opis" DisplayMemberBinding="{Binding RoomGuest.Description}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Grid Column="1">
+            <StackPanel>
+                <Button Name="button1" Content="Dodaj gościa" Click="Button1_OnClick" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
+                <Button Name="button2" Content="Dodaj rezerwacje" Click="Button2_OnClick" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
+                <Button Name="button3" Content="Wymelduj" Click="Button3_OnClick" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
+                <Button Name="button4" Content="Zamelduh rez." Click="Button4_OnClick" Height="30" Width="100" VerticalAlignment="Top" Margin="10"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
