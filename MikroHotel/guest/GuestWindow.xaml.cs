@@ -1,16 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using MikroHotel.data;
 
 namespace MikroHotel.guest
@@ -78,6 +67,19 @@ namespace MikroHotel.guest
 
                 }
                 container.SaveFile();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nie zaznaczono pokoju.");
+            }
+        }
+
+        private void Button5_OnClick(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                EditGuest editGuest = new EditGuest(container.GuestList[this.ListView1.SelectedIndex], ListView1, container);
+                editGuest.Show();
             }
             catch (Exception ex)
             {

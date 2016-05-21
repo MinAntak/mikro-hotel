@@ -30,6 +30,7 @@ namespace MikroHotel.guest
             {
                 if (room.Vacant.ToString() == "Wolny") NumerPokoju.Items.Add(room.Number + " (" + room.People + "-osobowy)");
             }
+            this.Inne.Text = "-";
 
             this.container = container;
         }

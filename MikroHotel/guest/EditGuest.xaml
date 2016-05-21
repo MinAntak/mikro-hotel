@@ -1,0 +1,42 @@
+﻿<Window x:Class="MikroHotel.guest.EditGuest"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MikroHotel.guest"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="AddGuest" Height="450" Width="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="183*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Margin="110,0,-0.4,228.4" Grid.RowSpan="2">
+            <Label Name="label1" Content="Edytuj gościa" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" />
+        </StackPanel>
+
+        <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,0.4,0.4,0.4">
+            <Label Content="Nazwisko" Margin="5,0,0,0"></Label>
+            <Label Content="Imie" Margin="5,0,0,0"></Label>
+            <Label Content="Telefon" Margin="5,0,0,0"></Label>
+            <Label Content="Inne" Margin="5,5,0,0"></Label>
+            <Label Content="Data przyjazdu" Margin="5,5,0,0"></Label>
+            <Label Content="Data odjazdu" Margin="5,5,0,0"></Label>
+        </StackPanel>
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="110,0.4,-0.4,0.4">
+            <TextBox Name="Nazwisko" Margin="5"></TextBox>
+            <TextBox Name="Imie" Margin="5"></TextBox>
+            <TextBox Name="Telefon" Margin="5"></TextBox>
+            <TextBox Name="Inne" Margin="5"></TextBox>
+            <DatePicker Name="Przyjazd" Margin="5" SelectedDate="{x:Static sys:DateTime.Now}"/>
+            <DatePicker Name="Odjazd" Margin="5" SelectedDate="{x:Static sys:DateTime.Now}"/>
+            <Button Name="EditButton" Content="Dodaj" Margin="50,20,50,50" Click="EditButton_OnClick"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
