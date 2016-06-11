@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using MikroHotel.data;
 
 namespace MikroHotel.room
@@ -26,9 +17,9 @@ namespace MikroHotel.room
         public EditRoom(Room room, ListView listview, Container container)
         {
             InitializeComponent();
-            this.Numerpokoju.Text = room.Number.ToString();
-            this.Opis.Text = room.Description;
-            this.Iloosobwy.Text = room.People.ToString();
+            roomNumber.Text = room.Number.ToString();
+            description.Text = room.Description;
+            howManyPeople.Text = room.People.ToString();
             this.room = room;
             this.container = container;
             list = listview;
@@ -38,9 +29,9 @@ namespace MikroHotel.room
         {
             try
             {
-                room.Number = int.Parse(this.Numerpokoju.Text);
-                room.People = int.Parse(this.Iloosobwy.Text);
-                room.Description = this.Opis.Text;
+                room.Number = int.Parse(roomNumber.Text);
+                room.People = int.Parse(howManyPeople.Text);
+                room.Description = description.Text;
                 container.SaveFile();
                 this.list.Items.Refresh();
                 this.Close();

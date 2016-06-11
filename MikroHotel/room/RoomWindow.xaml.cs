@@ -1,20 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using MikroHotel.data;
-using Wpf.Util;
 using Container = MikroHotel.data.Container;
 
 namespace MikroHotel.room
@@ -36,6 +21,7 @@ namespace MikroHotel.room
         {
             try
             {
+                //Remove the room from container and XML file
                 this.container.RoomList.RemoveAt(this.ListView1.SelectedIndex);
                 container.SaveFile();
             }
@@ -49,7 +35,7 @@ namespace MikroHotel.room
         {
             try
             {
-                RoomStatus status = new RoomStatus(container.RoomList[this.ListView1.SelectedIndex], ListView1, container);
+                RoomStatus status = new RoomStatus(container.RoomList[ListView1.SelectedIndex], ListView1, container);
                 status.Show();
                 
             }
@@ -63,7 +49,7 @@ namespace MikroHotel.room
         {
             try
             {
-                EditRoom edit = new EditRoom(container.RoomList[this.ListView1.SelectedIndex], ListView1, container);
+                EditRoom edit = new EditRoom(container.RoomList[ListView1.SelectedIndex], ListView1, container);
                 edit.Show();
 
             }

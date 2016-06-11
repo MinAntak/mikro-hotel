@@ -88,11 +88,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="about\About_Window.xaml.cs">
-      <DependentUpon>About_Window.xaml</DependentUpon>
+    <Compile Include="about\AboutWindow.xaml.cs">
+      <DependentUpon>AboutWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="data\Container.cs" />
-    <Compile Include="GridViewSort.cs" />
     <Compile Include="guest\AddGuest.xaml.cs">
       <DependentUpon>AddGuest.xaml</DependentUpon>
     </Compile>
@@ -117,7 +116,7 @@
     <Compile Include="room\RoomWindow.xaml.cs">
       <DependentUpon>RoomWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="about\About_Window.xaml">
+    <Page Include="about\AboutWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -147,7 +146,7 @@
     </Compile>
     <Compile Include="data\Data.cs" />
     <Compile Include="data\Guest.cs" />
-    <Compile Include="data\GuestDataInterface.cs" />
+    <Compile Include="data\Interface.cs" />
     <Compile Include="data\Room.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

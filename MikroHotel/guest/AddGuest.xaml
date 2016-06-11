@@ -6,15 +6,15 @@
         xmlns:local="clr-namespace:MikroHotel.guest"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
-        Title="AddGuest" Height="450" Width="300">
+        Title="Dodaj gościa" Height="400" Width="300">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="110*"/>
-            <ColumnDefinition Width="183*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="5*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Margin="110,0,-0.4,228.4" Grid.RowSpan="2">
             <Label Name="label1" Content="Dodaj gościa" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" />
@@ -30,14 +30,14 @@
             <Label Content="Data odjazdu" Margin="5,5,0,0"></Label>
         </StackPanel>
         <StackPanel Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" Margin="110,0.4,-0.4,0.4">
-            <TextBox Name="Nazwisko" Margin="5"></TextBox>
-            <TextBox Name="Imie" Margin="5"></TextBox>
-            <TextBox Name="Telefon" Margin="5"></TextBox>
-            <TextBox Name="Inne" Margin="5"></TextBox>
-            <ComboBox Name="NumerPokoju" Margin="5" />
-            <DatePicker Name="Przyjazd" Margin="5" SelectedDate="{x:Static sys:DateTime.Now}"/>
-            <DatePicker Name="Odjazd" Margin="5" SelectedDate="{x:Static sys:DateTime.Now}"/>
-            <Button Name="AddButton" Content="Dodaj" Margin="50,20,50,50" Click="AddButton_OnClick"/>
+            <TextBox Name="surname" Margin="5"></TextBox>
+            <TextBox Name="nameg" Margin="5"></TextBox>
+            <TextBox Name="phone" Margin="5"></TextBox>
+            <TextBox Name="other" Margin="5"></TextBox>
+            <ComboBox Name="roomNumber" Margin="5" />
+            <DatePicker Name="checkIn" Margin="5" SelectedDate="{x:Static sys:DateTime.Now}"/>
+            <DatePicker Name="checkOut" Margin="5" SelectedDate="{x:Static sys:DateTime.Now}"/>
+            <Button Name="addButton" Content="Dodaj" Margin="50,20,50,50" Click="AddButton_OnClick"/>
         </StackPanel>
 
     </Grid>

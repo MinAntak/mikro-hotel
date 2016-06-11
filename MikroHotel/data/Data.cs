@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿/*
+Base class for data about guests and rooms.
+*/
 namespace MikroHotel.data
 {
     public class Data
@@ -15,7 +12,10 @@ namespace MikroHotel.data
         {
             
         }
-        
 
+        public virtual void randomID()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

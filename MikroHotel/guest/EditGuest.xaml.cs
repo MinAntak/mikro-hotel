@@ -1,16 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using MikroHotel.data;
 
 namespace MikroHotel.guest
@@ -28,12 +18,12 @@ namespace MikroHotel.guest
             InitializeComponent();
             this.room = room;
             this.container = container;
-            this.Imie.Text = room.RoomGuest.Name;
-            this.Nazwisko.Text = room.RoomGuest.Surname;
-            this.Przyjazd.Text = room.RoomGuest.CheckIn;
-            this.Odjazd.Text = room.RoomGuest.CheckOut;
-            this.Telefon.Text = room.RoomGuest.Phone;
-            this.Inne.Text = room.RoomGuest.Description;
+            nameG.Text = room.RoomGuest.Name;
+            surname.Text = room.RoomGuest.Surname;
+            checkIn.Text = room.RoomGuest.CheckIn;
+            checkOut.Text = room.RoomGuest.CheckOut;
+            phone.Text = room.RoomGuest.Phone;
+            other.Text = room.RoomGuest.Description;
             list = listview;
         }
 
@@ -41,15 +31,15 @@ namespace MikroHotel.guest
         {
             try
             {
-                room.RoomGuest.Surname = this.Nazwisko.Text;
-                room.RoomGuest.Name = this.Imie.Text;
-                room.RoomGuest.Phone = this.Telefon.Text;
-                room.RoomGuest.Description = this.Inne.Text;
-                room.RoomGuest.CheckIn = this.Przyjazd.Text;
-                room.RoomGuest.CheckOut = this.Odjazd.Text;        
+                room.RoomGuest.Surname = surname.Text;
+                room.RoomGuest.Name = nameG.Text;
+                room.RoomGuest.Phone = phone.Text;
+                room.RoomGuest.Description = other.Text;
+                room.RoomGuest.CheckIn = checkIn.Text;
+                room.RoomGuest.CheckOut = checkOut.Text;        
                 container.SaveFile();
                 list.Items.Refresh();
-                this.Close();
+                Close();
             }
             catch (Exception ex)
             {

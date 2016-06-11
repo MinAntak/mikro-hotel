@@ -33,16 +33,17 @@ namespace MikroHotel.guest
 
         private void Button3_OnClick(object sender, RoutedEventArgs e)
         {
+            //remove all values about guest from room
             try
             {
-                this.container.GuestList[this.ListView1.SelectedIndex].RoomGuest.Surname = null;
-                this.container.GuestList[this.ListView1.SelectedIndex].RoomGuest.Name = null;
-                this.container.GuestList[this.ListView1.SelectedIndex].RoomGuest.Phone = null;
-                this.container.GuestList[this.ListView1.SelectedIndex].RoomGuest.Description = null;
-                this.container.GuestList[this.ListView1.SelectedIndex].RoomGuest.CheckOut = null;
-                this.container.GuestList[this.ListView1.SelectedIndex].RoomGuest.CheckIn = null;
-                this.container.GuestList[this.ListView1.SelectedIndex].Vacant = Room.status.Wolny;
-                this.container.GuestList.RemoveAt(this.ListView1.SelectedIndex);
+                container.GuestList[ListView1.SelectedIndex].RoomGuest.Surname = null;
+                container.GuestList[ListView1.SelectedIndex].RoomGuest.Name = null;
+                container.GuestList[ListView1.SelectedIndex].RoomGuest.Phone = null;
+                container.GuestList[ListView1.SelectedIndex].RoomGuest.Description = null;
+                container.GuestList[ListView1.SelectedIndex].RoomGuest.CheckOut = null;
+                container.GuestList[ListView1.SelectedIndex].RoomGuest.CheckIn = null;
+                container.GuestList[ListView1.SelectedIndex].Vacant = Room.status.Wolny;
+                container.GuestList.RemoveAt(ListView1.SelectedIndex);
                 container.SaveFile();
             }
             catch (Exception ex)
@@ -54,11 +55,12 @@ namespace MikroHotel.guest
 
         private void Button4_OnClick(object sender, RoutedEventArgs e)
         {
+            //Change status from to confirm reservation
             try
             {
-                if (this.container.GuestList[this.ListView1.SelectedIndex].Vacant == Room.status.Zarezerwowany)
+                if (this.container.GuestList[ListView1.SelectedIndex].Vacant == Room.status.Zarezerwowany)
                 {
-                    this.container.GuestList[this.ListView1.SelectedIndex].Vacant = Room.status.Zajety;
+                    this.container.GuestList[ListView1.SelectedIndex].Vacant = Room.status.Zajety;
                     ListView1.Items.Refresh();
                 }
                 else
@@ -78,7 +80,7 @@ namespace MikroHotel.guest
         {
             try
             {
-                EditGuest editGuest = new EditGuest(container.GuestList[this.ListView1.SelectedIndex], ListView1, container);
+                EditGuest editGuest = new EditGuest(container.GuestList[ListView1.SelectedIndex], ListView1, container);
                 editGuest.Show();
             }
             catch (Exception ex)

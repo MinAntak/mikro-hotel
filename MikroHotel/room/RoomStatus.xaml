@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MikroHotel.room"
         mc:Ignorable="d"
-        Title="RoomStatus" Height="150" Width="200">
+        Title="Status" Height="150" Width="200">
     <Grid>
         <StackPanel>
             <Label Content="Status pokoju" Margin="2" />

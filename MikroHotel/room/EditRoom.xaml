@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MikroHotel.room"
         mc:Ignorable="d"
-        Title="Edytuj Pokój" Height="400" Width="400">
+        Title="Edytuj Pokój" Height="300" Width="300">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="3*"/>
@@ -14,7 +14,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="5*"/>
-            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Column="1" Grid.Row="0">
             <Label Name="label1" Content="Edytuj pokój" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Top" />
@@ -27,11 +26,11 @@
             <Label Content="Opis" Margin="5,0"></Label>
         </StackPanel>
         <StackPanel Grid.Column="1" Grid.Row="1">
-            <TextBox Name="Numerpokoju" Margin="5"></TextBox>
-            <TextBox Name="Iloosobwy" Margin="5"></TextBox>
-            <TextBox Name="Status" Margin="5"></TextBox>
-            <TextBox Name="Opis" Margin="5"></TextBox>
-            <Button Name="EditButton" Content="Zmień" Margin="50,50,50,50" Click="EditButton_OnClick"/>
+            <TextBox Name="roomNumber" Margin="5"></TextBox>
+            <TextBox Name="howManyPeople" Margin="5"></TextBox>
+            <TextBox Name="status" Margin="5"></TextBox>
+            <TextBox Name="description" Margin="5"></TextBox>
+            <Button Name="editButton" Content="Zmień" Margin="50,50,50,50" Click="EditButton_OnClick"/>
         </StackPanel>
 
     </Grid>

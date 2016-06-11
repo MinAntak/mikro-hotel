@@ -4,27 +4,26 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MikroHotel.guest"
-        xmlns:util="clr-namespace:Wpf.Util"
         mc:Ignorable="d"
-        Title="GuestWindow" Height="600" Width="800">
+        Title="Goście" Height="600" Width="800">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="1*"/>
         </Grid.ColumnDefinitions>
 
-        <ListView Name="ListView1" Margin="5" Grid.Column="0" ItemsSource="{Binding GuestList}" IsSynchronizedWithCurrentItem="True" util:GridViewSort.AutoSort="True">
+        <ListView Name="ListView1" Margin="5" Grid.Column="0" ItemsSource="{Binding GuestList}" IsSynchronizedWithCurrentItem="True">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="Numer pokoju" 
-                                    DisplayMemberBinding="{Binding Number}" util:GridViewSort.PropertyName="Number"/>
-                    <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Vacant}" util:GridViewSort.PropertyName="Vacant"/>
-                    <GridViewColumn Header="Nazwisko" DisplayMemberBinding="{Binding RoomGuest.Surname}" util:GridViewSort.PropertyName="RoomGuest.Surname"/>
-                    <GridViewColumn Header="Imie" DisplayMemberBinding="{Binding RoomGuest.Name}" util:GridViewSort.PropertyName="RoomGuest.Name"/>
-                    <GridViewColumn Header="Telefon" DisplayMemberBinding="{Binding RoomGuest.Phone}" util:GridViewSort.PropertyName="RoomGuest.Phone"/>
-                    <GridViewColumn Header="Przyjazd" DisplayMemberBinding="{Binding RoomGuest.CheckIn}" util:GridViewSort.PropertyName="RoomGuest.CheckIn"/>
-                    <GridViewColumn Header="Odjazd" DisplayMemberBinding="{Binding RoomGuest.CheckOut}" util:GridViewSort.PropertyName="RoomGuest.CheckOut"/>
-                    <GridViewColumn Header="Opis" DisplayMemberBinding="{Binding RoomGuest.Description}" util:GridViewSort.PropertyName="RoomGuest.Description"/>
+                                    DisplayMemberBinding="{Binding Number}" />
+                    <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Vacant}"/>
+                    <GridViewColumn Header="Nazwisko" DisplayMemberBinding="{Binding RoomGuest.Surname}" />
+                    <GridViewColumn Header="Imie" DisplayMemberBinding="{Binding RoomGuest.Name}" />
+                    <GridViewColumn Header="Telefon" DisplayMemberBinding="{Binding RoomGuest.Phone}"/>
+                    <GridViewColumn Header="Przyjazd" DisplayMemberBinding="{Binding RoomGuest.CheckIn}" />
+                    <GridViewColumn Header="Odjazd" DisplayMemberBinding="{Binding RoomGuest.CheckOut}" />
+                    <GridViewColumn Header="Opis" DisplayMemberBinding="{Binding RoomGuest.Description}" />
                 </GridView>
             </ListView.View>
         </ListView>

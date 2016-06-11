@@ -1,19 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using System.Xml.Serialization;
 using MikroHotel.data;
 
 namespace MikroHotel.room
@@ -36,10 +22,10 @@ namespace MikroHotel.room
             try
             {
                 int id = randomID();
-                int howRooms = int.Parse(this.Ilepokoi.Text);
-                int firstRoom = int.Parse(this.Numerpierwszego.Text);
-                int howPeople = int.Parse(this.Ileosobowy.Text);
-                string description = this.Opis.Text;
+                int howRooms = int.Parse(this.howManyRooms.Text);
+                int firstRoom = int.Parse(this.firstRoom.Text);
+                int howPeople = int.Parse(this.howManyPeople.Text);
+                string description = this.description.Text;
 
                 for (int i = firstRoom; i < firstRoom + howRooms; i++)
                 {
@@ -54,6 +40,7 @@ namespace MikroHotel.room
             }
             
         }
+        //set random ID for all rooms the same type
         public int randomID()
         {
             Random rand = new Random();

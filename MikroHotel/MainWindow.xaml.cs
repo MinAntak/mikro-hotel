@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.ObjectModel;
+﻿
 using System.Windows;
 using MikroHotel.about;
 using MikroHotel.data;
@@ -25,7 +24,7 @@ namespace MikroHotel
         private void Button4_OnClick(object sender, RoutedEventArgs e)
         {
             //throw new NotImplementedException();
-            About_Window abtWindow = new About_Window();
+            AboutWindow abtWindow = new AboutWindow();
             abtWindow.Show();
         }
 

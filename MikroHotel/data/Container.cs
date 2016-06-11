@@ -1,16 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Xml.Serialization;
-
+/*
+Class keeping containers, which has rooms objects and guest objects
+*/
 namespace MikroHotel.data
 {
-    public class Container
+    public class Container : Interf
     {
         public ObservableCollection<Room> RoomList { get; set; }
         public ObservableCollection<Room> GuestList { get; set; }
@@ -23,7 +20,7 @@ namespace MikroHotel.data
             addGuestList();
         }
 
-        private void OpenFile()
+        public void OpenFile()
         {
             if (File.Exists("listapokoi.xml"))
             {
@@ -50,7 +47,7 @@ namespace MikroHotel.data
                 serializer.Serialize(sw, RoomList);
             }
         }
-
+        //Adding rooms which status is booked
         public void addGuestList()
         {
             foreach (Room roomek in RoomList)

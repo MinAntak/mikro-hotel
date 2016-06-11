@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MikroHotel.data
 {
@@ -18,9 +14,9 @@ namespace MikroHotel.data
         {
             Wolny, Zajety, Zarezerwowany, Niedostepny
         }
+
         public Room()
-        {
-            
+        {   
         }
 
         public Room(int roomnumber, int id, int people, string description)
@@ -33,7 +29,7 @@ namespace MikroHotel.data
             this.RoomGuest = new Guest();
         }
 
-        public void randomID()
+        public override void randomID()
         {
             Random rand = new Random();
 

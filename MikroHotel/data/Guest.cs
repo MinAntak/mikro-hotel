@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MikroHotel.data
+﻿namespace MikroHotel.data
 {
-    public class Guest : Data, IGuestData
+    public class Guest : Data
     {
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -21,11 +15,6 @@ namespace MikroHotel.data
             Phone = null;
             CheckIn = null;
             CheckOut = null;
-        }
-
-        public void addGuest()
-        {
-            
         }
     }
 }
