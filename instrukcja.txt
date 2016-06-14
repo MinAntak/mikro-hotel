@@ -1,0 +1,7 @@
+Program pozwala na tworzenie i zarządzanie pokojami, zmienianie ich statusu.
+Przypisywanie do konkretnych pokoi gości.
+Proste zarządzanie listą gości przyjezdnych oraz zarezerwowanych (dodawanie, usuwanie, edytowanie).
+
+Do działania programu potrzebny jest plik XML z listą pokoi (w przypadku jej braku program zasygnalizuje komunikatem przy uruchomieniu), można skorzystać z przykładowego dodanego do repo (listapokoi.xml, wrzucić do folderu z plikem wykonywalnym aplikacji) albo wygenerować własny po prostu dodając pokój przez okno "Dodaj pokoje".
+
+
